@@ -182,5 +182,151 @@
     //Static method should go after Static variable 
     
     
+    //**(Pt 20) 
+    //**MORE static variables**
     
+    //2 main ways of referenceing static variables: through static variables or the constructor (name)
+    
+    //1
+    newuser2.usernameCount++;
+    System.out.println(newuser2.usernameCount);
+    
+    //2
+    Registration.usernameCount++;
+    System.out.println(Registration.usernameCount);
+    
+    //Also, you can RESET  a static variable
+    Registration.usernameCount = 0;
+    System.out.println(Registration.usernameCount);
+    
+    
+    //**(Pt.21)
+    //**Variable Scope**
+    
+    //when creating a variable or object inside a method, its usable ONLY inside THAT METHOD
+    //If want other method to be able to reference those variables, must DEFINE them OUTSIDE METHOD IN CLASS
+    
+    public class Scope {
+    
+    
+    
+    //var. outside method, alailable to other methods
+    public static void main(String[] args) { //start local
+    
+    int number = 7; //local variable-DECLARING it & INITIALIZING it
+    
+    //a variable doesnt get init. until its assigned a value
+    
+    }//end local
+    
+    
+    public class Scope {
+    
+    static int number = 7; //MUST be STATIC for other methods to reach it
+    
+    //var. outside method, alailable to other methods
+    public static void main(String[] args) { 
+    
+    //int number = 7; 
+    
+    
+    
+    }
+    
+    static void getNumber() {
+    
+        System.out.println(number);//can be reached because static int outside methods, 
+                                    //static methods need static variables
+                                    //GREEN = GLOBAL 
+        
+    }
+    
+    }
+    
+    
+    //**(Pt22)
+    //**"this" keyword**
+    
+    public class This {
+    
+        private int one;        //Object or Instance var.
+        public This (int one) {
+        
+        this.one = one;     //local var.
+        
+   }
+   
+   public static void main(String [] args) {
+   
+        This testThis = new This (79);
+        
+        System.out.println(testThis.one);
+        
+        
+     }
+     
+    // OUTPUT: 79
+    
+    //**(Pt.23)
+    //**default Constructor**
+    
+   //psvm (tab) for main method
+   
+   public class NewEmpty {
+   
+   //public NewEmpty() {  //EXPLICIT CONSTRUCTOR, SAME as new NewEmpty(); below
+   
+   }
+   
+    int x = 10;
+    int y = 11;
+    
+    public static void main(String args[]) {
+    
+        NewEmpty test = new NewEmpty(); //DEFAULT/IMPLICIT CONSTRUCTOR, NO ARGUMENTS ALLOWED
+                                        //IMPLICT bc didnt type out above
+                                        
+                         //Creates a COPY (or Instantiates class NewEmpty() ) & calls it test              
+        System.out.println(test.x);
+    }
+    
+    }
+
+    //**(Pt. 24)**
+    //**Constructors vs methods**
+    
+    //construcor comes first then the methods
+    //CONSTRUCTORS CANNOT RETURN values, METHODS can
+    //NO void or static in Constructors!!
+    //Access modifiers (public, protected, etc.) CAN be used by BOTH (SIGNITURES)
+    
+    
+    //**(Pt.25)**
+    //**Using "super" keyword in methods**
+    
+    
+  public class ChildClass extends BaseClass { //ChildClass aka a SUBCLASS 
+                                              //Inherites all from BaseClass
+                                              //Inherites methods & variables defined in BaseClass
+    public void printSomething() {
+        
+        System.out.println("This was printed from ChildClass");
+    }
+    
+    public static void main(String [] args) {
+    
+        ChildClass testSuper = new ChildClass();
+        
+        testSuper.printSomething();
+        
+      }
+      
+   }   
+   
+   //CLASS: BaseClass
+   
+   public class BaseClass {
+   
+   
+   }
     
