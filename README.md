@@ -49,6 +49,7 @@
     int secondNumber;
     
     public int getNumber() {
+    
       return(firstNumber + secondNumber);
       }
       
@@ -69,7 +70,20 @@
     
     public class ClassTemplate { //only PUBLIC or DEFAULT
     
-    int day = 1; visible to the package
+    int day = 1; //visible to the package
+    public int week = 7; // world visible
+    protected int month = 31; //visible to package. the default
+    private int year = 365; //vis. to class only
+    
+    public int printWeek () { //has access to all (private or not) so those variables are not messed up
+                               //METHODS SHOULD mostly ALWAYS be public so other classes(etc.) can be used
+        return week + day + month + year;
+        }
+      }//access private varibales through public methods 
+      
+      
+    
+
     
     
     
