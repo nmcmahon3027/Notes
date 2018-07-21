@@ -309,8 +309,11 @@
                                               //Inherites all from BaseClass
                                               //Inherites methods & variables defined in BaseClass
     public void printSomething() { //presidence over same method from BaseClass
-        
-        System.out.println("This was printed from ChildClass");
+    
+        super.printSomething();//Now it prints from BaseClass
+                                //uses printSomthing() method from super class (BaseClass)
+                                //this OVERWRITES this method and used method from super
+        //System.out.println("This was printed from ChildClass");
     }
     
     public static void main(String [] args) {
@@ -329,9 +332,117 @@
    
      public void printSomething() {
         
-        System.out.println("This was printed from BaseClass");//named the same so doesnt get printed
+     System.out.println("This was printed from BaseClass");//named the same so doesnt get printed
     }
    
    
    }
     
+   //**(Pt 9)**
+   //**The for loop
+   
+   class forloop { 
+    public static void main(String[] args){
+    
+   //3 main parts
+    //for(initizialation section/parameter, conditional section *how far(when to end for loop),
+    //changed section (what to do EACH time the loop runs)
+    
+      for(int start = 0; start <= 10; start++)      //or +=2 (adding 2)
+ { 
+        System.out.print(start);
+ 
+ 
+      }
+      //OUTPUT: 012345678910
+      
+      
+    //**(Pt10)
+    //**While loop
+    
+    //while loops check a CONDITION and continues if it is true
+
+class whileloop {
+public static void main(String[] args) {
+
+int topNumber = 15;
+int bottomNumber = 1;
+
+while(bottomNumber < topNumber) {
+
+System.out.print("this is a loop");
+bottomNumber++; //Must increment to avoid never ending loop
+}
+
+        //OUTPUT: this is a loop (14 times)
+        //if false, not output
+        
+        
+ //**(Pt 11) 
+ //**the do-while loop
+ //do comes first ==>STATEMENT then CONDITIONS 
+ //should get at least ONE line of output
+ 
+ 
+ class dowhile {
+    public static void main(String[] args) {
+    
+        int topNumber = 15;
+        int bottomNumber = 1;
+        
+      do 
+        {
+        System.out.print("this is a loop");
+        bottomNumber++;
+        
+      }
+      while(bottomNumber < topNumber);
+      
+   //**(Pt 12)
+   //**Arrays**
+   
+   class Arrays {
+    public static void main(String[] args) {
+    
+    int[] numbers;          //defined/created array
+    numbers = new int[5];       //how many ELEMENTS (or variables I suppose) will be stored in the array
+    
+    numbers [0] = 35;              // numbers[index] = 35;
+    numbers [1] = 65;
+    numbers [2] = 135;
+    numbers [3] = 335;
+    numbers [4] = 535;
+    
+    System.out.print(numbers[1]); //numbers @ index 1
+        }
+     }   
+     //OUTPUT:65
+     
+     
+     class Arrays {
+    public static void main(String[] args) {
+    
+    String[] candy;          
+    candy = new String[2];       
+    
+    candy [0] = "mint";              
+    candy [1] = "rock";
+    
+     System.out.print(candy[0]);
+     
+     }
+   }  
+     
+     //OUTPUT: mint
+     
+     
+      class Arrays {
+    public static void main(String[] args) {  //QUICKER WAY to initialize
+    
+    int[] numbers = {5, 9, 45}; //value 5 @ index 0, value 9 @ index 1, etc
+    
+    System.out.print(numbers[2]);
+    }
+   } 
+    //OUTPUT: 45
+   
