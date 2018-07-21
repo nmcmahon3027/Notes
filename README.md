@@ -308,7 +308,7 @@
   public class ChildClass extends BaseClass { //ChildClass aka a SUBCLASS 
                                               //Inherites all from BaseClass
                                               //Inherites methods & variables defined in BaseClass
-    public void printSomething() {
+    public void printSomething() { //presidence over same method from BaseClass
         
         System.out.println("This was printed from ChildClass");
     }
@@ -326,6 +326,11 @@
    //CLASS: BaseClass
    
    public class BaseClass {
+   
+     public void printSomething() {
+        
+        System.out.println("This was printed from BaseClass");//named the same so doesnt get printed
+    }
    
    
    }
