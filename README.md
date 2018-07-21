@@ -80,16 +80,106 @@
         return week + day + month + year;
         }
       }//access private varibales through public methods 
+      //variables you set resticitions on
       
       
+    (Pt. 18)
+    //**Void and Return Methods**
+//void basically means not returning a value
+ //If void is in method, NOT RETURNING ANYTHING
+ 
+ ++CLASS: Food.java
+ ++CLASS: HamburgerJoint.java (main)
+ 
+ public class Food {
+ 
+ private String foodA; //private variables is good practice
+ 
+ public Food (String A) { //constructor
+ 
+        foodA = A;
+  
+ }
+ 
+ public String getFood() {
+ //making PUBLIC METHOD it has access to PRIVATE VARIABLE: String foodA==>bc its in the same class
+ 
+ return foodA;//use return when a value is returned   //sout tab (syso)
+ }    
+ 
+ void systemPrint() { void ONLY if nothing is returned
+ 
+    System.out.println(foodA);
+ 
+ }
+ 
+ //CLASS: HamburgerJoint
+ 
+ public class HaburgerJoint {
+ 
+    public static void main(String[] args) {
     
-
+    Food servingA = new Food("Hamburger");  //DECLARE OBJECT, Food class
+    
+    System.out.println(servingA.getFood()); 
+    servingA.systemPrint(); //void method
+    
+    }
+    
+    
+    //**(Pt 19)
+    //**static variables and static methods**
+    
+    public class Registration {
+    
+        private String usernameA;// Object or Instance variables DO GO AWAY
+        private static in usernameCount = 0;//static variables NEVER go away 
+        
+        //use class name to refer to STATIC VARIABLES
+    
+        public Registration (String A) { //CONSTRUCTOR 
+        
+            usernameA = A;
+            usernameCount++;
+            
+           } 
+           
+    public String putUsernameDatabase() { //return method
+    
+        return usernameA; //puts username into database
+        
+        }
+        
+    public static int getUsernameCount() {//static method  
+    
+        return usernameCount;
+        
+        }
+     }   
     
     
     
     
     
+    //**Main.java**
     
+    public class Main {
+    
+        public static void main(String[] args) {
+        
+            Registration newuser1 = new Registration("Mary");//new (keyword) invokes CONSTRUCTOR Registation
+            System.out,println(newuser1.putUsernameDatabase()
+                    + " username created and entered into datanase");
+                    
+             Registration newuser2 = new Registration("Larry");
+            System.out,println(newuser2.putUsernameDatabase()
+                    + " username created and entered into datanase");
+                    
+            System.out.println(Registration.getUsernameCount()); //Boss:"Get me the # of users"        
+            
+    
+    //NOTE: STATIC METHODS & STATIC VARIABLES go together like 2 pees in a pod!
+    //Static method should go after Static variable 
     
     
     
