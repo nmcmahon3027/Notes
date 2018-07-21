@@ -446,3 +446,13 @@ bottomNumber++; //Must increment to avoid never ending loop
    } 
     //OUTPUT: 45
    
+//**(pt.28)**Look at this to understand
+//OOP and the life cycle of the object
+
+//ex: 
+// 3 classes: ChildClass, MiddleClass, SuperClass
+
+ChildClass extends MiddleClass
+MiddleClass extends SuperClass
+
+ChildClass-->MiddleClass-->SuperClass-->MiddleClass--ChildClass-->main
