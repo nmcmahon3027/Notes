@@ -598,7 +598,7 @@ CLASS: Spider.java
     }
     }
     
-**(Pt.32 More Metrhods)
+**(Pt.32 More Methods)
 
     public class Methods {
     
