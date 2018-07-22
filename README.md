@@ -2,11 +2,12 @@
 //interface EJ Media Youtube)
 
 (14)**Interfaces**
+
     Planet Earth = new Planet();
 
     Earth.size = 25000;
 
-    Planet Hupiter = new Planet();
+    Planet Jupiter = new Planet();
     //Planet is its own interface
     
     **Converting/ Casting**
@@ -771,3 +772,17 @@ CLASS: Spider.java
         theDirectory.add(new DirectoryEntry("Jane Smith", "555-5467"));
         intindex = theDirectory.indexOf(new DirectoryEntry(aName,""));
         //Method indexOfsearches theDirectoryby applying the equalsmethod for class DirectoryEntry.                                 //Assume DirectoryEntry's equalsmethod compares namefields.
+        
+  //Reallocate Method
+  
+        private void reallocate () {
+        capacity *= 2; 
+        theData = Arrays.copyOf(theData, capacity);
+        }
+        
+  //KWArrayList as a COLLECTION OF OBJECTS
+  
+        private Object[] theData;  
+        
+        //REMOVE parameter type <E> from the class heading
+        //replace each reference to data type E by Object
