@@ -630,6 +630,16 @@ CLASS: Spider.java
 
 //OUTPUT: 12
 
+//**(Pt.39)**
+//**Abstract classes and methods**
 
+    public abstract class Mammal { //If making an Abstract Method, Class needs to be Abstract too!
+    
+    public abstract void hair(); //Abstract methods are BLANK, fill out later
+    public abstract void breathe();
+                                    //CANNOT create objects off of abstract methods
+                                    //Must extend super class from subclasses if you want to
+                                    //MUST: if you put abstract methods in super class, MUST USE THEM IN SUBCLASS!!
+    }
 
           
