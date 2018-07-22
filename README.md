@@ -596,8 +596,39 @@ CLASS: Spider.java
 
     }
     }
+    
+**(Pt.32 More Metrhods)
 
+    public class Methods {
+    
+    void numberTrees(int trees) { //RECIEVING METHOD//Fancy Name: Parameter 2. Local varianle
+                                  //A PLACEHOLDER for value passed in 
+                                  //**"void" DOES NOT RETURN a valur to the calling method ** 
+                                  //@ return;   doesnt go back bc void
+    
+        trees = trees +1;
+        int trees2 = 4;     //Declared and given value HERE, thats why its not in the ( )
+        System.out.println(trees + trees2);
+        
+      }  
+      
+      int returnNumber(int x) { //Has to RETURN (an int) bc not void  
+     //int             int  ==>    must match
+           x = x + 1;
+           returnx;
+       }
+       
+       public static void main(String [] args) {
+       
+       Methods testTree = new Methods();
+       
+       testTree.numberTrees(7); //the CALLING METHOD//Argument 2. Passing a value
+                                //Always SEND ARGUMENTS TO RECIEVING METHOD: numberTrees (up top)
+       System.out.println(testTree.returnNumber(55));
+       
+       }
 
+//OUTPUT: 12
 
 
 
