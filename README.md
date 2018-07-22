@@ -544,13 +544,60 @@ public class App {
 
 public static void main(String[] args) {
 
-Insect allInsects[] = new Insect[3];
-
+Insect allInsects[] = new Insect[4];//# of OBJECTS(0,1,2,3)  //specifying SUPER CLASS
+                                    //Declaring Array type of Insect (super class type)
 allInsects[0] = new Roach();
-allInsects[1] = new Beatle();
-allInsects[2] = new Beatle();
+allInsects[1] = new Beatle();       //can put any subclass of insect inside array
+allInsects[2] = new Spider();
+allInsects[3] = new Spider();
+
+for (int i = 0; i < allInsects.length; i++); //loop through the array
+
+allInsects [i].eat(); //can call any of the SUPER CLASS MEHTODS
 
 }
+
+}
+}
+
+(Inheritence) Classes (Other Insects)
+
+CLASS: Beatle.java
+
+public class Beatle extends Insect {
+
+}
+
+CLASS: Roach.java 
+
+public class Roach extends Insect {
+
+//if I were to do this below it would OVERWRIDEs Super class method
+
+void eat() { //MUST have the same name (eat) to take presidence
+System.out.println("A Roach has Eaten");  //OUTPUT: A Roach has Eaten
+                                          //        Eat (x3)
+
+}
+}
+
+CLASS: Spider.java
+
+public class Spider extends Insect {
+
+}
+
+(Super)CLASS: Insect
+
+public class Insect {
+
+void eat() {
+System.out.println("Eat");
+
+}
+}
+
+
 
 
 
