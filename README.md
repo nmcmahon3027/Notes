@@ -456,3 +456,85 @@ ChildClass extends MiddleClass
 MiddleClass extends SuperClass
 
 ChildClass-->MiddleClass-->SuperClass-->MiddleClass--ChildClass-->main
+
+
+//**(Pt 30)
+//** Primitive and Object Reference variables
+
+public class Road {
+
+int x = 20; //primitive variable
+            //1.Declare 2.give name 3.assign a value
+
+int y = x;
+double decimal = 5.5;
+
+public static void main(String[] args) {
+
+Road mile15 = new Road(); //Object Reference variable
+                            //Represents a way to get to that object
+                            //Like a street sign
+                            //the sign is not the street itself
+                            //Here it is constructed
+                            //mile15 (the name) its POINTING to the actual object in memory
+                       
+Road Maple = mile15;//Use Road class and create new reference 
+                    //ALSO POINTING to same object  
+                    //INSTANCE OF ROAD OBJECT 
+                    
+Road Smith = new Road(); //Builds a NEW INSTANCE of Road (another Road Object)                   
+
+}
+
+//(Pt.31)
+//**Getters & Setters**
+//Always 2 methods: A GET & a SET
+//Point is to encapsulate variables
+
+public class Orc {
+
+private int height;
+
+public void setHeight (int height) {
+
+if(height < 10) {
+this.height = height;
+System,out.println("Orc met Criteria");
+}else{
+    System.out.println("Please enter a height under 10 feet");
+}    
+
+}
+
+public int getHeight() {
+
+    return height;
+ }
+ 
+ }
+ 
+ //**(Pt. 38)**
+ //**Polymorphism**
+ 
+ 
+ -Normal way we have created Objects:
+ 
+ Beat beatleObj = new Beatle();
+ ^          ^           ^
+ Reference              Object we created
+ Type
+ 
+ -Create Objects FROM SUPER CLASS
+ 
+ Insect beatleObj = new Beatle();
+ ^
+ reference type (Super Class Insect)
+ 
+ //Polymorphosm is FLAVORS or VERSIONS of that type
+ 
+ Super Class:Insect-->Sub Class: Beatle
+  v         v
+Obj Beatle Obj Beatle
+
+
+          
