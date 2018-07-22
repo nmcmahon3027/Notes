@@ -288,9 +288,9 @@
                                         
                          //Creates a COPY (or Instantiates class NewEmpty() ) & calls it test              
         System.out.println(test.x);
-    }
+      }
     
-    }
+        }
 
     //**(Pt. 24)**
     //**Constructors vs methods**
@@ -452,8 +452,8 @@
 //ex: 
 // 3 classes: ChildClass, MiddleClass, SuperClass
 
-ChildClass extends MiddleClass
-MiddleClass extends SuperClass
+    ChildClass extends MiddleClass
+    MiddleClass extends SuperClass
 
 ChildClass-->MiddleClass-->SuperClass-->MiddleClass--ChildClass-->main
 
@@ -491,27 +491,27 @@ ChildClass-->MiddleClass-->SuperClass-->MiddleClass--ChildClass-->main
 //Always 2 methods: A GET & a SET
 //Point is to encapsulate variables
 
-public class Orc {
+    public class Orc {
 
-private int height;
+    private int height;
+    
+    public void setHeight (int height) {
 
-public void setHeight (int height) {
-
-if(height < 10) {
-this.height = height;
-System,out.println("Orc met Criteria");
-}else{
+    if(height < 10) {
+    this.height = height;
+    System,out.println("Orc met Criteria");
+    }else{
     System.out.println("Please enter a height under 10 feet");
-}    
+    }    
 
-}
+    }
 
-public int getHeight() {
+    public int getHeight() {
 
     return height;
- }
+     }
  
- }
+     }
  
  //**(Pt. 38)**
  //**Polymorphism**
@@ -540,62 +540,62 @@ Polymorphism Arrays:
 5 classes:
 App.java    Beatle.java     Roach.java  Spider.java     Insect.java
 
-public class App {
+    public class App {
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
 
-Insect allInsects[] = new Insect[4];//# of OBJECTS(0,1,2,3)  //specifying SUPER CLASS
+    Insect allInsects[] = new Insect[4];//# of OBJECTS(0,1,2,3)  //specifying SUPER CLASS
                                     //Declaring Array type of Insect (super class type)
-allInsects[0] = new Roach();
-allInsects[1] = new Beatle();       //can put any subclass of insect inside array
-allInsects[2] = new Spider();
-allInsects[3] = new Spider();
+    allInsects[0] = new Roach();
+    allInsects[1] = new Beatle();       //can put any subclass of insect inside array
+    allInsects[2] = new Spider();
+    allInsects[3] = new Spider();
 
-for (int i = 0; i < allInsects.length; i++); //loop through the array
+    for (int i = 0; i < allInsects.length; i++); //loop through the array
 
-allInsects [i].eat(); //can call any of the SUPER CLASS MEHTODS
+    allInsects [i].eat(); //can call any of the SUPER CLASS MEHTODS
 
-}
+    }
 
-}
-}
+    }
+    }
 
 (Inheritence) Classes (Other Insects)
 
 CLASS: Beatle.java
 
-public class Beatle extends Insect {
+    public class Beatle extends Insect {
 
-}
+    }
 
 CLASS: Roach.java 
 
-public class Roach extends Insect {
+    public class Roach extends Insect {
 
 //if I were to do this below it would OVERWRIDEs Super class method
 
-void eat() { //MUST have the same name (eat) to take presidence
-System.out.println("A Roach has Eaten");  //OUTPUT: A Roach has Eaten
+    void eat() { //MUST have the same name (eat) to take presidence
+    System.out.println("A Roach has Eaten");  //OUTPUT: A Roach has Eaten
                                           //        Eat (x3)
 
-}
-}
+    }
+    }
 
 CLASS: Spider.java
 
-public class Spider extends Insect {
+    public class Spider extends Insect {
 
-}
+    }
 
 (Super)CLASS: Insect
 
-public class Insect {
+    public class Insect {
 
-void eat() {
-System.out.println("Eat");
+    void eat() {
+    System.out.println("Eat");
 
-}
-}
+    }
+    }
 
 
 
