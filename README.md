@@ -806,3 +806,57 @@ CLASS: Spider.java
           }
           }
          } 
+//To have program CONTINUE AFTER an EXCEPTION occurs, set up as model below:
+
+        try
+        {
+            //code that throws exception
+        }
+        catch(Exception ex)
+        {
+            //handle
+        }
+        try
+        {
+            //code that throws exception
+        }
+        catch(Exception ex)
+        {
+            //handle
+        }    
+        
+  //**(Pt.36)
+  //**Overloading vs Overriding
+  
+  //Overloading: having 2 METHODS w/ the SAME NAME, but DIFFERENT ARGUMENT LISTS
+  //ALWAYS W/ IN THE SAME CLASS (no inheritence or polyorphism)
+  //CAN, however, have different return types (int, double, etc)
+  //Personal preference (can name each method seperatly and not have to overload)
+        public class Overloading {
+        
+        public int multiply(int a, int b) {
+        return a * b;
+        }
+        
+        public double multiply(double a, double b, double c) {
+        return a * b * c;
+        
+        }
+        
+        public static void main(String [] args) {
+        
+            Overloading testObj = new Overloading();
+            
+            System.out.println(testObj.multiply(int a, int b));
+            //OR
+            //System.out.println(testObj.multiply(double a, double b, double c)); //difference is the # of args
+        
+        }
+        }
+        
+  //OVERRIDING (part of Polymorphism/ inheritence)
+  //If created SUPER CLASS w/ method, and have a SUBCLASS w/ method of same name==> MUST USE same arguments & RETURN TYPE
+  
+  //EX   Superclass: int addInt()       Subclass: int addInt() 
+  
+  
