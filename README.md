@@ -676,3 +676,98 @@ CLASS: Spider.java
     }
     //If dont know what kind of Exception to use, use the generic Exception:
     // }catch (Exception er) {
+    
+//**ArrayLists (pp: CHAPTER 2 in text)
+
+ //To declare a List“object” whose elements will reference Stringobjects:
+     List<String> myList = new ArrayList<String>();
+  
+  //The initial List is empty and has a default initial capacity of 10 elements
+  //To add string to the list:
+  
+        myList.add("Bashful");
+        myList.add("Awful");
+        myList.add("Jumpy");
+        myList.add("Happy");
+        
+   
+        
+   //myList = [0]       [1]     [2]     [3]     
+          "Bashful"   "Awful"  "Jumpy"  "Happy"
+          
+   //Adding an element with subscript  2:
+   
+        myList.add(2, "Doc");
+        
+   //The subscripts  of "Jumpy" and "Happy" have changed  from [2],[3] to [3],[4]     
+    
+     //myList = [0]       [1]     [2]    [3]    [4]   
+          "Bashful"   "Awful"  "Doc"  "Jumpy"   "Happy"
+          
+ //When no subscript is  specified, an element is added at the end of the list:
+ 
+        myList.add("Dopey");                                //[5]"Dopey"
+        
+  //Removing an Element:
+  
+   
+    //myList = [0]       [1]     [2]    [3]    [4]        [5]
+          "Bashful"   "Awful"  "Doc"  "Jumpy"   "Happy"    "Dopey"
+          
+           myList.remove(1);
+           
+      //myList = [0]       [1]     [2]      [3]       [4]        
+          "Bashful"   "Doc"     "Jumpy"    "Happy"   "Doepy"           
+           
+           
+ //Replacing
+    
+            mylist.set(2, "Sneezy"); //Replaces Jumpy w/ Sneezy
+    
+  //MUST use the get() method to access an element 
+  
+        String dwarf = myList.get(2); //value of dwarf becomes "Sneezy"
+        
+  //Search an ArrayList:
+  
+        myList.indexOf("Sneezy"); //retruns: 2
+        
+        return of -1 indicates UNSUCCESSFUL SEARCH
+        
+ //Generic Collections
+ 
+// The general declaration for generic collection is
+ 
+        CollectionClassName<E> variable= new CollectionClassName<E>();
+        
+        //The <E> indicates a type parameter
+        //primitive types will be autoboxed
+        
+ //Example Application of ArrayList
+ 
+        ArrayList<Integer> someInts = new ArrayList<Integer>();
+        int[] nums = {5, 7, 2, 15};
+        for (int i = 0; i < nums.length; i++) {
+        someInts.add(nums[i]);  //nums[i]is an int; it is automatically wrapped in an Integer object
+        }
+        // Display the sum
+        int sum = 0;
+        for (int i = 0; i < someInts.size(); i++) {
+   
+        sum += someInts.get(i);
+        }
+        System.out.println("sum is " + sum);
+        
+   //Create class for objects stored in directory
+   
+        public class DirectoryEntry {
+            
+            String name;
+            String number;
+           
+        }
+        
+        private ArrayList<DirectoryEntry> theDirectory = new ArrayList<DirectoryEntry>(); //Create Directory
+        theDirectory.add(new DirectoryEntry("Jane Smith", "555-5467"));
+        intindex = theDirectory.indexOf(new DirectoryEntry(aName,""));
+        //Method indexOfsearches theDirectoryby applying the equalsmethod for class DirectoryEntry.                                 //Assume DirectoryEntry's equalsmethod compares namefields.
