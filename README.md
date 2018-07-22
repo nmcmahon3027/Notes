@@ -88,8 +88,8 @@
 //void basically means not returning a value
  //If void is in method, NOT RETURNING ANYTHING
  
- ++CLASS: Food.java
- ++CLASS: HamburgerJoint.java (main)
+ //CLASS: Food.java
+ //CLASS: HamburgerJoint.java (main)
  
  public class Food {
  
@@ -115,7 +115,7 @@
  
  //CLASS: HamburgerJoint
  
- public class HaburgerJoint {
+    public class HaburgerJoint {
  
     public static void main(String[] args) {
     
