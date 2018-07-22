@@ -786,3 +786,23 @@ CLASS: Spider.java
         
         //REMOVE parameter type <E> from the class heading
         //replace each reference to data type E by Object
+
+//**(Pt. 58)**
+//**Different ways to set up try catch blocks
+
+//if you have one try block and 2 catch blocks, PUT THE DETAILED EXCEPTION FIRST! GENERIC 2ND (to clean up any missed)
+
+        try {
+        
+        } catch (IndexOutOfBoundsException er) {
+            System.out.println( "Skipped");
+        }
+        
+          catch(Exception er) {
+            System.out.println("Whatever");
+            
+            //OUTPUT: Whatever 
+            //bc 2nd line is skipped
+          }
+          }
+         } 
