@@ -536,5 +536,22 @@ public int getHeight() {
   v         v
 Obj Beatle Obj Beatle
 
+Polymorphism Arrays:
+5 classes:
+App.java    Beatle.java     Roach.java  Spider.java     Insect.java
+
+public class App {
+
+public static void main(String[] args) {
+
+Insect allInsects[] = new Insect[3];
+
+allInsects[0] = new Roach();
+allInsects[1] = new Beatle();
+allInsects[2] = new Beatle();
+
+}
+
+
 
           
