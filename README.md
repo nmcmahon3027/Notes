@@ -91,27 +91,27 @@
  //CLASS: Food.java
  //CLASS: HamburgerJoint.java (main)
  
- public class Food {
+    public class Food {
  
- private String foodA; //private variables is good practice
+     private String foodA; //private variables is good practice
  
- public Food (String A) { //constructor
+    public Food (String A) { //constructor
  
         foodA = A;
   
- }
+    }
  
- public String getFood() {
+    public String getFood() {
  //making PUBLIC METHOD it has access to PRIVATE VARIABLE: String foodA==>bc its in the same class
  
- return foodA;//use return when a value is returned   //sout tab (syso)
- }    
+    return foodA;//use return when a value is returned   //sout tab (syso)
+     }    
  
- void systemPrint() { void ONLY if nothing is returned
+    void systemPrint() { void ONLY if nothing is returned
  
     System.out.println(foodA);
  
- }
+    }
  
  //CLASS: HamburgerJoint
  
@@ -254,9 +254,9 @@
         
         this.one = one;     //local var.
         
-   }
+     }
    
-   public static void main(String [] args) {
+     public static void main(String [] args) {
    
         This testThis = new This (79);
         
@@ -272,11 +272,11 @@
     
    //psvm (tab) for main method
    
-   public class NewEmpty {
+     public class NewEmpty {
    
-   //public NewEmpty() {  //EXPLICIT CONSTRUCTOR, SAME as new NewEmpty(); below
+    //public NewEmpty() {  //EXPLICIT CONSTRUCTOR, SAME as new NewEmpty(); below
    
-   }
+    }
    
     int x = 10;
     int y = 11;
@@ -305,7 +305,7 @@
     //**Using "super" keyword in methods**
     
     
-  public class ChildClass extends BaseClass { //ChildClass aka a SUBCLASS 
+    public class ChildClass extends BaseClass { //ChildClass aka a SUBCLASS 
                                               //Inherites all from BaseClass
                                               //Inherites methods & variables defined in BaseClass
     public void printSomething() { //presidence over same method from BaseClass
@@ -328,7 +328,7 @@
    
    //CLASS: BaseClass
    
-   public class BaseClass {
+    public class BaseClass {
    
      public void printSomething() {
         
@@ -336,20 +336,20 @@
     }
    
    
-   }
+     }
     
    //**(Pt 9)**
    //**The for loop
    
-   class forloop { 
+     class forloop { 
     public static void main(String[] args){
     
-   //3 main parts
-    //for(initizialation section/parameter, conditional section *how far(when to end for loop),
+     //3 main parts
+     //for(initizialation section/parameter, conditional section *how far(when to end for loop),
     //changed section (what to do EACH time the loop runs)
     
       for(int start = 0; start <= 10; start++)      //or +=2 (adding 2)
- { 
+     { 
         System.out.print(start);
  
  
@@ -362,17 +362,17 @@
     
     //while loops check a CONDITION and continues if it is true
 
-class whileloop {
-public static void main(String[] args) {
+    class whileloop {
+    public static void main(String[] args) {
 
-int topNumber = 15;
-int bottomNumber = 1;
+    int topNumber = 15;
+    int bottomNumber = 1;
 
-while(bottomNumber < topNumber) {
+    while(bottomNumber < topNumber) {
 
-System.out.print("this is a loop");
-bottomNumber++; //Must increment to avoid never ending loop
-}
+    System.out.print("this is a loop");
+    bottomNumber++; //Must increment to avoid never ending loop
+    }
 
         //OUTPUT: this is a loop (14 times)
         //if false, not output
@@ -384,7 +384,7 @@ bottomNumber++; //Must increment to avoid never ending loop
  //should get at least ONE line of output
  
  
- class dowhile {
+    class dowhile {
     public static void main(String[] args) {
     
         int topNumber = 15;
@@ -401,7 +401,7 @@ bottomNumber++; //Must increment to avoid never ending loop
    //**(Pt 12)
    //**Arrays**
    
-   class Arrays {
+    class Arrays {
     public static void main(String[] args) {
     
     int[] numbers;          //defined/created array
@@ -431,7 +431,7 @@ bottomNumber++; //Must increment to avoid never ending loop
      System.out.print(candy[0]);
      
      }
-   }  
+     }  
      
      //OUTPUT: mint
      
@@ -443,7 +443,7 @@ bottomNumber++; //Must increment to avoid never ending loop
     
     System.out.print(numbers[2]);
     }
-   } 
+     } 
     //OUTPUT: 45
    
 //**(pt.28)**Look at this to understand
@@ -461,30 +461,30 @@ ChildClass-->MiddleClass-->SuperClass-->MiddleClass--ChildClass-->main
 //**(Pt 30)
 //** Primitive and Object Reference variables
 
-public class Road {
+    public class Road {
 
-int x = 20; //primitive variable
+    int x = 20; //primitive variable
             //1.Declare 2.give name 3.assign a value
 
-int y = x;
-double decimal = 5.5;
+    int y = x;
+    double decimal = 5.5;
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
 
-Road mile15 = new Road(); //Object Reference variable
+    Road mile15 = new Road(); //Object Reference variable
                             //Represents a way to get to that object
                             //Like a street sign
                             //the sign is not the street itself
                             //Here it is constructed
                             //mile15 (the name) its POINTING to the actual object in memory
                        
-Road Maple = mile15;//Use Road class and create new reference 
+    Road Maple = mile15;//Use Road class and create new reference 
                     //ALSO POINTING to same object  
                     //INSTANCE OF ROAD OBJECT 
                     
-Road Smith = new Road(); //Builds a NEW INSTANCE of Road (another Road Object)                   
+    Road Smith = new Road(); //Builds a NEW INSTANCE of Road (another Road Object)                   
 
-}
+    }
 
 //(Pt.31)
 //**Getters & Setters**
