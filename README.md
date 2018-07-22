@@ -642,4 +642,37 @@ CLASS: Spider.java
                                     //MUST: if you put abstract methods in super class, MUST USE THEM IN SUBCLASS!!
     }
 
-          
+ //**(Pt.56)
+ //**Error handling and catching exceptions
+ 
+    class ErrorHandling {
+    
+    publuc static void main(String[] args) {
+    
+       try { //Risky code gets wrapped in try block
+        int[] testArray;
+        
+        testArray = new int[3];//set size to 3 elements
+        
+        testArray[0] = 1;
+        testArray[1] = 2;
+        testArray[2] = 3;
+        
+                                             //(1st ex.) System.out.println(testArray[2]); //OUTPUT: 3
+        System.out.println(testArray[99]);                                
+        
+        //Try-catch
+        //Try block is the guarded or 'risky' code
+        //Catch block 'traps' the exception and allows you to do something
+        //if you have a TRY BLOCK, MUST have a CATCH BLOCK
+        
+        } catch(IndexOutOfBoundsException er); { //takes 2 arguments
+                                                // IndexOutOfBoundsException is a java class, obj./var of class
+        
+            System.out.println("An out of Bounds exception occured");
+            //OUTPUT: An out of Bounds exception occured
+    }
+    }
+    }
+    //If dont know what kind of Exception to use, use the generic Exception:
+    // }catch (Exception er) {
