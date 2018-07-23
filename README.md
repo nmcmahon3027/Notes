@@ -641,6 +641,17 @@ CLASS: Spider.java
                                     //CANNOT create objects off of abstract methods
                                     //Must extend super class from subclasses if you want to
                                     //MUST: if you put abstract methods in super class, MUST USE THEM IN SUBCLASS!!
+    public void swim() {                                
+                                    
+       }
+    
+    public void walk() { //NOT abstaract so can put in ANY subclass w/ out overriding
+    }
+       
+                                   
+    //Thats why Mammal class is ABSTRACT, its not a physical object and we just want ITS CHARACTERISTICS FOR OTHER METHODS
+    //We want them to inherite these methods, just not actually create an object from it
+    //SUBCLASS METHODS OVERRIDE the SUPERCLASS methods
     }
 
  //**(Pt.56)
