@@ -870,4 +870,6 @@ CLASS: Spider.java
   
   //EX   Superclass: int addInt()       Subclass: int addInt() 
   
-  
+ //**(Pt.50)
+ //**Final keyword w/ methods and classes
+ //CANNOT extend a final class 
