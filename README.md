@@ -38,6 +38,19 @@
     
     //OUTPUT: 47
     
+**(Pt. 15)**
+**Casting & Conversions of Data Types
+
+//You can Convert:  An OBJECT -> OBJECT
+                    VARIABLE -> VARIABLE
+//Can Create: OBJECT to create-> A SIMPLE VARIBALE  (vice versa)  
+
+//decimal to whole number Example:
+
+        double source = 150.05;
+        int destination = (int) source;
+                    
+    
     
     (pt. 16)
     **Constructors**
